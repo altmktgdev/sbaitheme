@@ -11,7 +11,6 @@
    * @since Twenty Twenty-One 1.0
    */
 ?>
-	
 
 	</section>
 		<footer class="main-footer">
