@@ -1,0 +1,27 @@
+.top-secondary-menu{
+	border-bottom					: 1px solid #dddddd;
+	display							: none;
+	width							: 100%;
+	height							:  var(--top-secondary-menu-height);
+	@include from(lg){
+		display						: flex;
+		align-items					: center;
+		padding						: 0 30px;
+	}
+	&__ul{
+		list-style						: none;
+		margin							: 0;
+		padding							: 0;
+		display: flex;
+	}
+	&__li{
+		margin							: 0;
+	}
+	&__anchor{
+		text-decoration					: none;
+		font							: normal normal normal 16px/24px Metropolis;
+		letter-spacing					: 0px;
+		color							: #0E263A;
+		margin-right: 30px;
+	}
+}

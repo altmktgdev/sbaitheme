@@ -1,0 +1,92 @@
+.top-nav{
+	border-top						: 1px solid #dddddd ;
+	border-bottom					: 1px solid #dddddd;
+	width							: 100%;
+	height							:  var(--top-nav-height);
+	display							: flex;
+	align-items						: center;
+	justify-content					: space-between;
+	padding							: 0 15px;
+	position						: relative;
+	box-sizing: border-box;
+	@include from(lg){
+		padding						: 0 30px;
+	}		
+
+	&__navigation-container{
+		display							: flex;
+		width							: 100%;
+		justify-content					: flex-end;
+		@include from(xl){
+			max-width							: 1177px;
+			justify-content					: space-between;
+		}
+	}
+	&__logo-container{
+		display							: flex;
+		align-items						: center;
+		width							: 216px;
+		@include from(lg){
+			width						: 260px;
+		}
+		@include from(xl){
+			width						: 425px;
+		}
+	}
+	&__logo-anchor{
+		display: flex;
+	}
+	&__top-logo{
+		width							: 216px;
+		@include from(lg){
+			width						: 260px;
+		}
+		@include from(xl){
+			width						: 425px;
+		}
+	}
+	&__search{
+		position						: absolute;
+		height							: 100%;
+		background-color				: white;
+		width							: 100%;
+		z-index							: 1;
+		top								: 0;
+		left							: 0;
+		right							: 0;
+		display							: none;
+		justify-content					: space-between;
+		align-items						: center;
+		// border							: 1px solid red;
+		box-sizing						: border-box;
+		padding							: 0 15px;
+		@include from(lg){
+			padding							: 0 30px;
+		}
+		&.active{
+			display						: flex;
+		}
+	}
+	&__search-logo-anchor{
+		line-height						: 0;
+		display: none;
+		@include from(lg){
+			display: block;
+		}
+	}
+	&__search-input{
+		width							: 100%;
+		max-width						: 1134px;
+		height							: 48px;
+		border-radius					: 8px;
+		border							: 1px solid #02263C;
+		margin							: 0 15px 0 0;
+		@include from(lg){
+			margin-right				: 0;
+		}
+	}
+	&__close-top-search{
+		cursor: pointer;
+	}
+}
+

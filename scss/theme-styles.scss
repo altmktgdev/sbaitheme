@@ -1,22 +1,29 @@
 /*here start de website template core*/
-@import "core/normalize.scss";
-@import "core/functions";
-@import "core/mixins";
-@import "core/media-queries";
+@import "./core/normalize.scss";
+@import "./core/functions";
+@import "./core/mixins";
+@import "./core/media-queries";
 $breakpoints 		:
 	(
-		s	: 0,
-		m	: 768px,
-		l	: 1024px,
-		lg	: 1440px,
-		xl	: 1600px,
-		xxl	: 1920px
+		s		: 0,
+		sm		: 480px,
+		m		: 640px,
+		l		: 960px,
+		lg		: 1280px,
+		xl		: 1600px,
+		xxl		: 1920px,
+		xxxl	: 4000px
 	);
-@import "layout/layout.scss";
-@import "layout/fonts.scss";
-@import "components/components.scss";
-@import "hacks/hacks";
-/*here finish de website template core*/ 
-body{
-	background-color: green;
-}
+@import "./layout/layout.scss";
+@import "./layout/fonts.scss";
+@import "./core-modules/core-modules"; 
+/*here finish de website template core*/
+
+/*here start de website internal components modules*/ 
+@import "./internal-modules/internal-modules";
+/*here finish de website internal components modules*/ 
+
+/*here start the hacks section*/
+@import "./hacks/hacks";
+/*here finish the hacks section*/  
+

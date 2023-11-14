@@ -1,0 +1,17 @@
+/*top widget*/
+.top-widget{
+	width							: 100%;
+	height							: var(--top-widget-height);
+	padding							: 0 15px;
+	@include from(lg){
+		padding						: 0 30px;
+	}
+	@include fromTo(s,sm){
+		&.top-widget-hidden{
+			display: none;
+		}
+	}
+}
+.top-widget > img{
+	width							: 1920px;
+}
