@@ -129,6 +129,9 @@
 			display							: flex;
 			align-items						: center;			
 		}
+		&__li:nth-child(n+6) {
+			display: none;		
+		}
 		&__anchor{
 			font							: normal normal bold 20px/31px Metropolis;
 			letter-spacing					: 0px;
