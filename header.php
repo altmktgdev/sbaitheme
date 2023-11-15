@@ -62,13 +62,15 @@
 				<?php get_template_part( 'template-parts/top-social-menu' );?>
 			</div>			
 			<div class="top-nav__search">
-				<form action="/" method="get">
+				
 					<a class="top-nav__search-logo-anchor" href="<?php echo home_url(); ?>"> 
 						<img class="top-nav__search-top-logo" src="<?php echo $logo; ?>" alt="">
-					</a>					
-					<input class="top-nav__search-input" type="search" name="s">					
+					</a>	
+					<form class="top-nav__form" action="/" method="get">				
+						<input class="top-nav__search-input" type="search" name="s">	
+					</form>				
 					<img class="close-top-search" src="<?php echo get_theme_file_uri('images/');?>hamburguer-close.svg" alt="">
-				</form>
+				
 			</div>			
 		</nav>
 		<div class="top-secondary-menu">
