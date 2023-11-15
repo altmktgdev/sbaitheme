@@ -47,8 +47,14 @@
 		</div>
 		<nav class="top-nav">		
 			<div class="top-nav__logo-container">
-				<a class="top-nav__logo-anchor" href="https://www.google.com/"> 
-					<img class="top-nav__top-logo" src="<?php echo get_theme_file_uri('images/logo.png');?>" alt="">
+				<?php
+					$logo = get_theme_file_uri()."/images/logo.png";
+					if(esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')))){
+					$logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')));
+					}
+				?>
+				<a class="top-nav__logo-anchor" href="<?php echo home_url(); ?>"> 
+					<img class="top-nav__top-logo" src="<?php echo $logo; ?>" alt="">
 				</a>
 			</div>
 			<div class="top-nav__navigation-container">
