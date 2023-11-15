@@ -10,6 +10,6 @@ function top_widget() {
         'after_widget' => '</div>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
-    ) );
+    ));
 }
 add_action( 'widgets_init', 'top_widget' );

@@ -43,7 +43,8 @@
 	<header class="main-header">
 	<div class="main-header__container">
 		<div class="top-widget">
-			<img src="<?php echo get_theme_file_uri('images//top_widget.png');?>" alt="">
+			<!-- <img src="<?php echo get_theme_file_uri('images//top_widget.png');?>" alt=""> -->
+			<?php dynamic_sidebar( 'top-widget' ); ?>
 		</div>
 		<nav class="top-nav">		
 			<div class="top-nav__logo-container">
