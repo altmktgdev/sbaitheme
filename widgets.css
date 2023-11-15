@@ -98,7 +98,7 @@ font: normal normal 600 15px/12px Poppins;
   }
 
 .top-widget-styles > .tw-w-full{
-  background: white;
+	background: transparent;
 }
 .top-widget-styles > .tw-w-full > .tw-w-full .scroll_container .game-dates {
   border-right: 2px solid #e5e5e5;
