@@ -61,9 +61,17 @@
 				<?php get_template_part( 'template-parts/main-menu' );?>
 				<?php get_template_part( 'template-parts/top-social-menu' );?>
 			</div>
-			<div class="top-nav__search"><a class="top-nav__search-logo-anchor" href="https://www.google.com/"> <img class="top-nav__search-top-logo" src="<?php echo get_theme_file_uri('images/');?>logo.png" alt=""></a>
-				<input class="top-nav__search-input" type="search" name=""><img class="close-top-search" src="<?php echo get_theme_file_uri('images/');?>hamburguer-close.svg" alt="">
+			<form action="/" method="get">
+			<div class="top-nav__search">
+				<a class="top-nav__search-logo-anchor" href="<?php echo home_url(); ?>"> 
+					<img class="top-nav__search-top-logo" src="<?php echo $logo; ?>" alt="">
+				</a>
+				
+					<input class="top-nav__search-input" type="search" name="s">
+				
+				<img class="close-top-search" src="<?php echo get_theme_file_uri('images/');?>hamburguer-close.svg" alt="">
 			</div>
+			</form>
 		</nav>
 		<div class="top-secondary-menu">
 			<?php get_template_part( 'template-parts/top-secondary-menu' );?>
