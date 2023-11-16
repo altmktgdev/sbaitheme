@@ -21,7 +21,7 @@
 			}
 			?>
 				<a href="<?php echo home_url(); ?>">
-					<img class="main-footer__logo" src="<?php echo $f_logo; ?>" alt="">
+					<img class="main-footer__logo" src="<?php echo $f_logo; ?>" alt="Sport Betting AI logo">
 				</a>
 			</div>
 			<div class="main-footer__item">
