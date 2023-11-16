@@ -18,3 +18,41 @@
 	color					: #0E263A !important;
 }
 
+.entry-title{
+	margin					: 10px 0 !important;
+}
+
+.entry-title > a{
+	color					: #0E263A !important;
+	font-size				: 40px !important;
+	line-height				: 45px !important;
+	text-decoration			: none !important;
+	font-weight				: 600 !important;
+}
+
+.entry-footer{
+	display					: none !important;
+}
+
+.nav-links{
+	display					: flex !important;
+    justify-content			: space-evenly !important;
+}
+
+.post-thumbnail{
+	width					: 100% !important;
+}
+.post-thumbnail .post-thumbnail-inner{
+	width					: 100% !important;
+	display					: block;
+}
+
+.post-thumbnail .post-thumbnail-inner > .wp-post-image{
+	width					: 100% !important;
+	max-width				: 100% !important;
+	border-radius			: 8px; 
+}
+
+.wp-caption-text{
+	display					: none !important;
+}
