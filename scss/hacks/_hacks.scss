@@ -41,7 +41,16 @@
 
 .post-thumbnail{
 	width					: 100% !important;
+	display					: block;
 }
+
+.post-thumbnail > img{
+	width					: 100% !important;
+	display					: block;
+	max-width				: 100% !important;
+	border-radius			: 8px;
+}
+
 .post-thumbnail .post-thumbnail-inner{
 	width					: 100% !important;
 	display					: block;
@@ -59,4 +68,15 @@
 
 .top-widget > div{
 	width					: 100% !important;
+}
+
+.aligncenter {
+	display					: block;
+	width					: 100%;
+}
+
+.aligncenter > img{
+	display					: block;
+	width					: 100%;
+	border-radius			: 8px;
 }
