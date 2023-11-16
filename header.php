@@ -30,6 +30,8 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="MobileOptimized" content="width">
 	<meta name="HandheldFriendly" content="true">
+	<meta name="robots" content="noindex"/>
+	<meta name="description" content="Sport Betting AI">
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
