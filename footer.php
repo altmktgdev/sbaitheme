@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<div class="main-footer__item">
-				<span class="main-footer__copy">Sports Betting AI 2023 All Rights Reserved</span>
+				<span class="main-footer__copy">Sport Betting AI 2023 All Rights Reserved</span>
 			</div>
 		</footer>
 	</main>
