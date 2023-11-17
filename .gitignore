@@ -53,3 +53,4 @@ prod/
 package-lock.json
 
 .vercel
+core-functions/top-widget
