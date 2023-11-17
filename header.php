@@ -50,7 +50,7 @@
 		<nav class="top-nav">		
 			<div class="top-nav__logo-container">
 				<?php
-					$logo = get_theme_file_uri()."/images/logo.png";
+					$logo = get_theme_file_uri()."/images/logo.gif";
 					if(esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')))){
 					$logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')));
 					}
