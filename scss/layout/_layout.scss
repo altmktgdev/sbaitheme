@@ -166,11 +166,14 @@ body {
 	
 	&__item:first-child{
 		z-index							: 2;
-		width							: calc(100% - 272px);
-		margin-right					: 30px;
+		width							: 100%;		
 		background-color				: white;
 		padding							: 15px;
 		border-radius					: 4px;
+		@include from(lg){
+			width							: calc(100% - 272px);
+			margin-right					: 30px;
+		}
 	}
 	&__item:last-child{
 		display							: none;
