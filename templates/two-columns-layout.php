@@ -11,7 +11,7 @@ get_header(); ?>
 		<?php the_content();?>
 	</div>
 	<div class="content-info-column__item">
-		<img src="<?php echo get_theme_file_uri(); ?>/images/right_widget_1.png" alt="">
+		<img class="side-image" src="<?php echo get_theme_file_uri(); ?>/images/right_widget_1.png" alt="">
 	</div>
 </div>
 <?php get_footer(); ?>
