@@ -59,3 +59,56 @@
 }
 /*Here finish top Widget styles*/
 
+
+
+/*Here start the side Widget 1 styles*/
+.side-widget-1{
+	width: 100% !important;
+  }
+
+  .side-widget-1 > div{
+	padding-top: 0;
+	width: 100%;
+  }
+  .side-widget-1 > div > div{
+	margin-top: 0;
+  }
+  
+  .side-widget-1 .league{
+	/* border: 1px solid red; */
+  }
+   
+  .side-widget-1 .league > .tw-flex{
+	/* border: 1px solid green; */
+	height: 60px;
+  }
+  
+  .side-widget-1 .league > .tw-flex:first-child img{
+	height: fit-content;
+	margin: 0;
+  }
+  
+  .side-widget-1 .league > .tw-flex:first-child{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+  }
+  
+  .side-widget-1 .league > .tw-flex:last-child{
+	font: normal normal 600 23px/28px Poppins;
+	letter-spacing: -0.46px;
+	color: #1F2024;
+  }
+  
+  .side-widget-1 .tw-cursor-pointer {
+	content: url(images/triangle-bottom.svg);
+	width: 25px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+  }
+  /*  */
+   
+  /*Here finish the side Widget 1 styles*/

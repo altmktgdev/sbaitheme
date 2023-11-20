@@ -11,7 +11,10 @@ get_header(); ?>
 		<?php the_content();?>
 	</div>
 	<div class="content-info-column__item">
-		<img class="side-image" src="<?php echo get_theme_file_uri(); ?>/images/right_widget_1.png" alt="">
+		<div class="content-info-column__sidebar-container">
+		<?php dynamic_sidebar( 'aside-widget' );?>
+			<?php echo do_shortcode('[sd-widgets widget="nextGames" sport="baseball" league="mlb" class="side-widget-1"]'); ?>
+		</div>
 	</div>
 </div>
 <?php get_footer(); ?>

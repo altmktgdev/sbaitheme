@@ -36,6 +36,7 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 	<title><?php wp_title( ' | ', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
 </head>
@@ -45,7 +46,7 @@
 	<header class="main-header">
 	<div class="main-header__container">
 		<div class="top-widget">
-			<?php dynamic_sidebar( 'top-widget' ); ?>
+		<?php echo do_shortcode('[sd-widgets widget="headerOdds" sport="football" league="nfl" class="top-widget-styles"]'); ?>
 		</div>
 		<nav class="top-nav">		
 			<div class="top-nav__logo-container">

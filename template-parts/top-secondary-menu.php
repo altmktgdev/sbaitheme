@@ -11,7 +11,7 @@
                         <a class="top-secondary-menu__anchor" href="' . $item->url . '">
                             ' . $item->title . '
                         </a>
-                     </li>';
+                    </li>';
             }
         }
     }

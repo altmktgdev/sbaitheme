@@ -1,5 +1,5 @@
 /*here start de website template core*/
-@import "./core/normalize.scss";
+@import "./core/normalize.scss"; 
 @import "./core/functions";
 @import "./core/mixins";
 @import "./core/media-queries";
@@ -25,5 +25,4 @@ $breakpoints 		:
 
 /*here start the hacks section*/
 @import "./hacks/hacks";
-/*here finish the hacks section*/    
-
+/*here finish the hacks section*/
