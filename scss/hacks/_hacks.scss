@@ -115,6 +115,20 @@
     object-fit: cover !important;
 }
 
+figure .aligncenter, .size-full{
+	position: relative;
+	height: 442px;
+}
+
+
+figure .aligncenter, .size-full > img{
+	width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    object-fit: cover !important;
+}
 .post-title-centered{
 	text-align: center;
 	@include from(lg){
