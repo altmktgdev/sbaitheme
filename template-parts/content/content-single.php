@@ -10,35 +10,38 @@
  */
 
 ?>
+<?php $sub_category_slug = get_subcategory_slug(); ?>
+<center><h1><span style="text-transform:uppercase"><?php echo esc_html($sub_category_slug); ?></span> Picks News</h1></center>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+<div class="content-info-column">
+	<div class="content-info-column__item category-description" >
 	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
+		<?php the_content();?>
+	</div>
+	<div class="content-info-column__item">
+		<div class="content-info-column__sidebar-container">
+		<?php dynamic_sidebar( 'aside-widget' );?>
+			<?php echo do_shortcode('[sd-widgets widget="nextGames" sport="baseball" league="mlb" class="side-widget-1"]'); ?>
+		</div>
+	</div>
+</div>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+<?php
+// Función para obtener el slug de la subcategoría a la que pertenece el post
+function get_subcategory_slug() {
+    $categories = get_the_category();
 
-		wp_link_pages(
-			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
-				'after'    => '</nav>',
-				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+    if ( ! empty( $categories ) ) {
+        foreach ( $categories as $category ) {
+            // Verificar si la categoría es una subcategoría
+            if ( $category->parent > 0 ) {
+                return $category->slug; // Devolver el slug de la subcategoría
+            }
+        }
+    }
 
-	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
-
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php endif; ?>
-
-</article><!-- #post-<?php the_ID(); ?> -->
+    return ''; // Si no se encuentra ninguna subcategoría, devolver cadena vacía
+}
+?>
