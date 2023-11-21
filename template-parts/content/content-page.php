@@ -10,7 +10,7 @@
  */
 
 ?>
-<h1>kike</h1>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( ! is_front_page() ) : ?>
