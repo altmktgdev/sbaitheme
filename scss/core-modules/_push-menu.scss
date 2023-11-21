@@ -157,9 +157,10 @@
 			
 		}
 		&__li:first-child > a{
-			text-align: center;
-			display: block;
-			padding: 0 !important;
+			text-align						: center;
+			display							: block;
+			padding							: 0 !important;
+			cursor							: pointer;
 			
 		}
 		&__li{
