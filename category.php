@@ -16,7 +16,7 @@ $is_news_category = ($category_slug === 'news');
 ?>
 <div class="content-info-column">
 	<div class="content-info-column__item">
-		<h1><span style="text-transform:uppercase"><?php echo esc_html($category_slug); ?></span>  Picks news</h1>
+		<h1><span style="text-transform:uppercase"><?php echo esc_html($category_slug); ?></span>  Picks News</h1>
 		<?php
                 if (!$is_news_category) {
                     echo do_shortcode('[news_top_banner tag="" category="' . $category_slug . '"]');

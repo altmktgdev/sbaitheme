@@ -17,6 +17,14 @@
 	<div class="content-info-column__item category-description" >
 	<header class="entry-header alignwide">
 		<?php twenty_twenty_one_post_thumbnail(); ?>
+		<div class="article-breadcrumb">
+			<?php 
+				echo '<a href="'.esc_url( home_url() ).'">Home</a><span> / </span>';
+				echo get_the_category_list( '<span> / </span>' );
+				echo '<span> / </span>';
+				echo '<a>'.get_the_title().'</a>';
+			?>
+		</div>
 	</header><!-- .entry-header -->
 		<?php the_content();?>
 	</div>

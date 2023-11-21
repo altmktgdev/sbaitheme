@@ -82,56 +82,66 @@
 }
 
 .wp-element-caption{
-	display: none !important;
+	display					: none !important;
 }
 
 .entry{
-	background-color: white;
-	padding: 15px;
-	border-radius: 4px;
+	background-color		: white;
+	padding					: 15px;
+	border-radius			: 8px;
 }
 
 .category-description{
-	background-color: white;
-	padding: 15px;
-	border-radius: 8px;
+	background-color		: white;
+	padding					: 15px;
+	border-radius			: 8px;
 	@include from(lg){
-		padding: 30px;
+		padding				: 30px;
 	}
 }
-
 .post-thumbnail{
-	position: relative;
-	height: 442px;
+	position				: relative;
+	height					: 442px;
 }
-
-
 .post-thumbnail > img{
-	width: 100% !important;
-    height: 100% !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    object-fit: cover !important;
+	width					: 100% !important;
+    height					: 100% !important;
+    position				: absolute !important;
+    top						: 0 !important;
+    left					: 0 !important;
+    object-fit				: cover !important;
 }
 
 figure .aligncenter, .size-full{
-	position: relative;
-	height: 442px;
+	position				: relative;
+	height					: 442px;
 }
-
-
 figure .aligncenter, .size-full > img{
-	width: 100% !important;
-    height: 100% !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    object-fit: cover !important;
+	width					: 100% !important;
+    height					: 100% !important;
+    position				: absolute !important;
+    top						: 0 !important;
+    left					: 0 !important;
+    object-fit				: cover !important;
 }
 .post-title-centered{
-	text-align: center;
+	text-align				: center;
 	@include from(lg){
-		margin-right: 340px;
+		margin-right		: 340px;
 	}
+}
+
+.navigation, .post-navigation{
+	display					: none;
+}
+
+.article-breadcrumb {
+	margin-bottom			: 15px;
+}
+
+.article-breadcrumb > a{
+	font					: normal normal normal 14px/21px Metropolis;
+	letter-spacing			: 0px;
+	color					: #000000;
+	text-decoration			: none;
 }
