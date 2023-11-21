@@ -90,6 +90,10 @@ const menuMultiNivel = () => {
 	const pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
 	pushMenuAnchors.forEach(anchor => {
 		anchor.addEventListener('click', (event) => {
+			if (anchor.textContent.trim().toLowerCase().includes('see all')) {
+                // No se ejecuta preventDefault para permitir el comportamiento normal del enlace
+                return;
+            }
 			event.preventDefault();
 			// Verifica si el ancho del viewport es mayor o igual a 1280px
 			if (window.innerWidth >= 1280) {

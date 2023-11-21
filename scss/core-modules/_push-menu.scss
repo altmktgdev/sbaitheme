@@ -85,6 +85,36 @@
 			margin							: 0;
 			padding							: 0;
 		}
+		
+		&__sub-menu-anchor-single{
+			text-decoration					: none;
+			font							: normal normal bold 16px/20px Metropolis;
+			letter-spacing					: 0px;
+			color							: #02263C;
+			display							: block;
+			height							: 50px;
+			display							: flex;
+			align-items						: center;
+			padding							: 0 15px;
+			position						: relative;		
+			background-repeat				: no-repeat;
+			background-position				: 10px;	
+			text-transform					: capitalize;
+			border-bottom					: 1px solid #dddddd;
+			&.arrow-sub-menu{
+				&::after{
+					content					: "";
+					background-image		: url('images/mb-menu-arrow-right.svg');
+					background-repeat		: no-repeat;
+					position				: absolute;
+					width					: 15px;
+					height					: 20px;
+					top						: 18px;
+					right					: 10px;
+					z-index					: 1;
+				}
+			}
+		}
 		&__sub-menu-anchor{
 			text-decoration					: none;
 			font							: normal normal bold 16px/20px Metropolis;
@@ -120,10 +150,36 @@
 		flex-wrap							: wrap;
 		justify-content						: flex-start;
 		// flex-direction						: column;
+		&__li:first-child{
+			flex							:none;
+			width							: 100%; 
+			margin-bottom					: 30px;	
+			
+		}
+		&__li:first-child > a{
+			text-align: center;
+			display: block;
+			
+		}
 		&__li{
 			flex							:none;
 			width							: 16.6666666667%; 
 			margin-bottom					: 30px;		
+		}
+		&__anchor-single{
+			font							: normal normal bold 24px/36px Metropolis;
+			color							: white;
+			text-decoration					: none;
+			font-weight						: bold;
+			text-transform					: capitalize;
+			// border							: 1px solid red;
+			display							: block;
+			padding-left					: 40px;
+			background-repeat				: no-repeat;
+			background-position				: 0;
+			cursor							: default;
+			position						: relative;
+			
 		}
 		&__anchor{
 			font							: normal normal bold 24px/36px Metropolis;
