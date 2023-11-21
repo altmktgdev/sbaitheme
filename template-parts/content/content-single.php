@@ -11,7 +11,7 @@
 
 ?>
 <?php $sub_category_slug = get_subcategory_slug(); ?>
-<center><h1><span style="text-transform:uppercase"><?php echo esc_html($sub_category_slug); ?></span> Picks News</h1></center>
+<h1 class="post-title-centered"><span style="text-transform:uppercase"><?php echo esc_html($sub_category_slug); ?></span> Picks News</h1>
 
 <div class="content-info-column">
 	<div class="content-info-column__item category-description" >

@@ -114,3 +114,10 @@
     left: 0 !important;
     object-fit: cover !important;
 }
+
+.post-title-centered{
+	text-align: center;
+	@include from(lg){
+		margin-right: 340px;
+	}
+}
