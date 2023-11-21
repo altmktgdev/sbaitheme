@@ -20,7 +20,7 @@ $is_news_category = ($category_slug === 'news');
 		<?php
                 if (!$is_news_category) {
                     echo do_shortcode('[news_top_banner tag="" category="' . $category_slug . '"]');
-                    echo do_shortcode('[main_mid_slider top="9" tag="" category="' . $category_slug . '" title=""]');
+                    echo do_shortcode('[main_mid_slider top="9" tag="" category="'. $category_slug.'" title="<span>'. $category_slug.'</span>"]');
                     echo do_shortcode('[home_banner]');
                     echo do_shortcode('[show_more_component tag="" category="' . $category_slug . '"]');
                 }
