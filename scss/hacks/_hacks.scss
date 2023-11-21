@@ -90,3 +90,12 @@
 	padding: 15px;
 	border-radius: 4px;
 }
+
+.category-description{
+	background-color: white;
+	padding: 15px;
+	border-radius: 8px;
+	@include from(lg){
+		padding: 30px;
+	}
+}
