@@ -51,7 +51,7 @@
 		<nav class="top-nav">		
 			<div class="top-nav__logo-container">
 				<?php
-					$logo = get_theme_file_uri()."/images/logo.gif";
+					$logo = get_theme_file_uri()."/images/logo_sbai.svg";
 					if(esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')))){
 					$logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')));
 					}

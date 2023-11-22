@@ -16,7 +16,6 @@
             <h2 class="entry-title default-max-width"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </header>
     </div>
-
     <div class="image-excerpt-div">
         <div class="featured-image-div">
             <?php
