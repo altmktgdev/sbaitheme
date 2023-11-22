@@ -67,7 +67,7 @@
 			<div class="top-nav__search">
 				
 					<a class="top-nav__search-logo-anchor" href="<?php echo home_url(); ?>"> 
-						<img class="top-nav__search-top-logo" src="<?php echo $logo; ?>" alt="">
+						<img class="top-nav__search-top-logo" src="<?php echo $logo; ?>" alt="Sport Betting AI logo">
 					</a>	
 					<form class="top-nav__form" action="/" method="get">				
 						<input class="top-nav__search-input" type="search" name="s">	
