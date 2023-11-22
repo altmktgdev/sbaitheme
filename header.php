@@ -35,7 +35,7 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet">
+	<link rel="preload" href="https://fonts.cdnfonts.com/css/metropolis-2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 	<title><?php wp_title( ' | ', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
