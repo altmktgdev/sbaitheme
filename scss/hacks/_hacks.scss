@@ -149,75 +149,39 @@ figure .aligncenter, .size-full > img{
 
 .search-results .image-excerpt-div{
 	display: flex;
-  }
-  
-  .search-results article.post {
-	border-radius: 10px;
-	background-color: #f7f7f7a2;
-	margin-bottom: 50px;
-	padding-left: 25px;
-	padding-right: 15px;
-	padding-top: 5px;
-	padding-bottom: 20px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	@include from(lg){
+		flex-direction: row;
+	}
+}
+
+.search-results article.post {
+	border-radius: 8px;
+	background-color: white;
+	margin-bottom: 30px;
 	box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
 	-webkit-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
 	-moz-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
-  }
-  
-  article.post .entry-header .entry-title a{
-	font-size: 18px ;
-	font-weight: 600 ;
-  }
-  
-  
-  .search-results .content-info-full{
-	max-width: 1000px;
-	margin: 0 auto;
-  }
-  
-  .search-results .nav-links{
-	margin-bottom: 100px;
-  }
-  
-  .search-results .nav-links a {
-	background-color: #f7f7f7a2;
-	padding: 15px;
-	border-radius: 10px;
-	margin-left: 10px;
-  }
-  
-  
-  @media screen and (max-width: 767px) {
-	.search-results .image-excerpt-div {
-	  flex-direction: column;
+	padding: 30px;
+	@include from (lg){
+		padding: 15px;
 	}
-  
-	.search-results .featured-image-div {
-	  text-align: center;
+}
+
+.image-excerpt-div .featured-image-div{
+	width: 100%;
+	@include from(lg){
+		width: 600px;
 	}
-  
-  
-  
-	.search-results .excerpt-div {
-	  margin-top: 20px;
+}
+.image-excerpt-div .featured-image-div > img{
+	width: 100%;
+	display: block;
+}
+.excerpt-div{
+	width: 100%;
+	@include from(lg){
+		width: calc(100% - 600px);
 	}
-  }
-  
-  @media screen and (min-width: 376px) and (max-width: 767px) {
-	.search-results .custom-featured-image {
-	  width: 100%;
-	  height: 260px;
-	}
-  }
-  
-  @media screen and (max-width: 360px){
-	.search-results .custom-featured-image{
-	  width: 100% !important;
-	}
-  }
-  
-  .search-results .nav-links a {
-	box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
-	-webkit-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
-	-moz-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
-  }
+}
