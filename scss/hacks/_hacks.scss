@@ -151,7 +151,7 @@ figure .aligncenter, .size-full > img{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	@include from(lg){
+	@include from(l){
 		flex-direction: row;
 	}
 }
