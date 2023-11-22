@@ -171,7 +171,7 @@ figure .aligncenter, .size-full > img{
 
 .image-excerpt-div .featured-image-div{
 	width: 100%;
-	@include from(lg){
+	@include from(l){
 		width: 400px;
 	}
 }
@@ -182,7 +182,7 @@ figure .aligncenter, .size-full > img{
 }
 .excerpt-div{
 	width: 100%;
-	@include from(lg){
+	@include from(l){
 		width: calc(100% - 400px);
 		padding-left: 15px;
 	}
