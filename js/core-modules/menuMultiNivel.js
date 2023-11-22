@@ -79,13 +79,26 @@ const menuMultiNivel = () => {
         });
     });
     const pushMenuListItems = document.querySelectorAll('.push-menu__li');
-    pushMenuListItems.forEach(li => {
-        const anchor = li.querySelector('.push-menu__anchor');
-        const subMenuContainer = li.querySelector('.push-menu__sub-menu-container');
-        if (subMenuContainer && anchor) {
-            anchor.classList.add('arrow-sub-menu');
-        }
-    });
+	pushMenuListItems.forEach(li => {
+		const anchor = li.querySelector('.push-menu__anchor');
+		const subMenuContainer = li.querySelector('.push-menu__sub-menu-container');
+
+		if (anchor) {
+			// Si hay un submenú, añade la clase y modifica el evento de clic
+			if (subMenuContainer) {
+				anchor.classList.add('arrow-sub-menu');
+
+				// Añade evento de clic que solo se activa si hay un submenú
+				anchor.addEventListener('click', (event) => {
+					// Si hay un submenú, evita el comportamiento por defecto
+					event.preventDefault();
+					// Aquí puedes añadir cualquier lógica adicional para manejar la apertura/cierre del submenú
+					// ...
+				});
+			}
+			// Si no hay submenú, el comportamiento del anchor se mantiene sin cambios
+		}
+	});
 	// Agrega funcionalidad de clic a .push-menu__anchor
 	const pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
 	pushMenuAnchors.forEach(anchor => {
