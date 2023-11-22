@@ -26,7 +26,6 @@
                 ?>
             </div>
             <h2><?php the_title(); ?></h2> <!-- Modificación aquí para el título -->
-            <p><?php the_content(); ?></p> <!-- Modificación aquí para el contenido -->
         </header><!-- .entry-header -->
         <?php the_content();?>
     </div>

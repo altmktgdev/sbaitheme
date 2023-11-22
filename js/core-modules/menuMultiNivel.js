@@ -93,6 +93,7 @@ const menuMultiNivel = () => {
 	const pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
 	pushMenuAnchors.forEach(anchor => {
 		anchor.addEventListener('click', (event) => {
+			
 			// El resto de la lógica para los elementos .push-menu__anchor
 			const subMenuContainer = anchor.nextElementSibling;
 			if (subMenuContainer && subMenuContainer.classList.contains('push-menu__sub-menu-container')) {
