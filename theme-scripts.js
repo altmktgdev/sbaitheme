@@ -91,18 +91,13 @@ var menuMultiNivel = function menuMultiNivel() {
     var subMenuContainer = li.querySelector('.push-menu__sub-menu-container');
     if (subMenuContainer && anchor) {
       anchor.classList.add('arrow-sub-menu');
-      anchor.addEventListener('click', function (event) {
-        event.preventDefault();
-        // Aquí puedes añadir cualquier lógica adicional para manejar la apertura/cierre del submenú
-        // ...
-      });
     }
   });
   // Agrega funcionalidad de clic a .push-menu__anchor
   var pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
   pushMenuAnchors.forEach(function (anchor) {
     anchor.addEventListener('click', function (event) {
-      if (anchor.textContent.trim().toLowerCase().includes('see all')) {
+      if (anchor.textContent.trim().toLowerCase().includes('All')) {
         // No se ejecuta preventDefault para permitir el comportamiento normal del enlace
         return;
       }
