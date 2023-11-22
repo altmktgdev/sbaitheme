@@ -51,8 +51,10 @@
 		background-size			: cover;
 		border-radius			: 8px;
 		width					: 100%;
-		max-width				: 600px;
-		height					: 281px;	
+		height					: 281px;
+		@include from(l){
+			max-width				: 600px;
+		}	
 	}
 	&__grid-item:last-child{
 		display					: flex;
