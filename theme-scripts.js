@@ -1,2 +1,316 @@
-!function(){"use strict";var e=[,function(e,t,o){o.r(t);t.default=function(){document.querySelectorAll(".main-menu__li").forEach((function(e){var t=e.querySelector(".main-menu__anchor"),o=e.querySelector(".main-menu__sub-menu-first-level");o&&t&&(t.addEventListener("click",(function(e){e.preventDefault();var t=o.classList.contains("active");document.querySelectorAll(".main-menu__sub-menu-first-level").forEach((function(e){e.classList.remove("active")})),document.body.classList.remove("body-overflow"),t||(o.classList.add("active"),document.body.classList.add("body-overflow"))})),t.classList.add("arrow-sub-menu"))}));var e=document.querySelector(".top-social-menu__hamburger");e?e.addEventListener("click",(function(){var e=document.querySelector(".top-widget"),t=document.querySelector(".main-header"),o=document.querySelector(".main-header__container"),n=document.querySelector(".main-menu"),r=document.querySelector(".top-social-menu__hamburger-open"),c=document.querySelector(".top-social-menu__hamburger-close");document.body.classList.remove("body-overflow"),r&&c&&("none"!==r.style.display?(r.style.display="none",c.style.display="block"):(r.style.display="block",c.style.display="none")),e&&t&&o&&n?(e.classList.toggle("top-widget-hidden"),t.classList.toggle("main-header-mb-height-adjusted"),o.classList.toggle("main-header-mb-height-adjusted"),n.classList.toggle("main-menu-mb-height")):console.error("Uno o más elementos necesarios no se encontraron.");var s=n,l=document.querySelector(".blurry-overlap");s?(s.classList.toggle("active"),l.classList.toggle("active"),document.body.classList.toggle("mb-body-overflow")):console.error("El menú multinivel no se encontró.")})):console.error("El botón de hamburguesa no se encontró."),document.querySelectorAll(".main-menu__mb-back").forEach((function(e){e.addEventListener("click",(function(){var t=e.closest(".main-menu__sub-menu-first-level");t?t.classList.remove("active"):console.error("El elemento de retorno no se encuentra dentro de un submenú.")}))})),document.querySelectorAll(".push-menu__li").forEach((function(e){var t=e.querySelector(".push-menu__anchor"),o=e.querySelector(".push-menu__sub-menu-container");t&&o&&(t.classList.add("arrow-sub-menu"),t.addEventListener("click",(function(e){e.preventDefault()})))})),document.querySelectorAll(".push-menu__anchor").forEach((function(e){e.addEventListener("click",(function(t){if(!e.textContent.trim().toLowerCase().includes("all"))if(t.preventDefault(),window.innerWidth>=1280)t.preventDefault();else{var o=e.nextElementSibling;if(o&&o.classList.contains("push-menu__sub-menu-container")){o.classList.toggle("active"),o.scrollIntoView();var n=e.closest(".push-menu");n&&(n.style.top="-40px"===n.style.top?"0px":"-40px")}}}))})),document.querySelectorAll(".main-menu__mb-back-push").forEach((function(e){e.addEventListener("click",(function(){var t=e.closest(".push-menu__sub-menu-container");if(t){t.classList.remove("active");var o=e.closest(".push-menu");o&&(o.style.top="0px")}}))}));var t=document.querySelector(".blurry-overlap");t?t.addEventListener("click",(function(){var e=document.querySelector(".top-social-menu__hamburger-open"),o=document.querySelector(".top-social-menu__hamburger-close");e&&o&&(e.style.display="block",o.style.display="none"),document.body.classList.remove("mb-body-overflow"),document.body.classList.remove("body-overflow");var n=document.querySelector(".main-menu");n&&(n.classList.remove("active"),n.classList.toggle("main-menu-mb-height")),t.classList.toggle("active");var r=document.querySelector(".main-header");r&&r.classList.toggle("main-header-mb-height-adjusted");var c=document.querySelector(".main-header__container");c&&c.classList.toggle("main-header-mb-height-adjusted");var s=document.querySelector(".top-widget");s&&s.classList.toggle("top-widget-hidden")})):console.error("El elemento .blurry-overlap no se encontró.");var o=document.querySelector(".open-top-search"),n=document.querySelector(".close-top-search"),r=document.querySelector(".top-nav__search");o&&r?o.addEventListener("click",(function(){r.classList.toggle("active")})):console.error("El botón para abrir la búsqueda o el contenedor de búsqueda no se encontraron."),n&&r?n.addEventListener("click",(function(){r.classList.remove("active")})):console.error("El botón para cerrar la búsqueda o el contenedor de búsqueda no se encontraron.")}},function(e,t,o){o.r(t);t.default=function(){document.addEventListener("DOMContentLoaded",(function(){if(document.querySelector(".mid-size-slider"))new Swiper(".mid-size-slider",{direction:"horizontal",loop:!1,allowThresholdMove:!0,slidesPerView:"auto",spaceBetween:7,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},breakpoints:{320:{},481:{},640:{},768:{},960:{},1024:{},1200:{},1440:{},1600:{},1900:{}}});var e=document.querySelector(".mid-size-slider-section");e&&(e.style.display="block")}))}}],t={};function o(n){var r=t[n];if(void 0!==r)return r.exports;var c=t[n]={exports:{}};return e[n](c,c.exports,o),c.exports}o.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var n={};!function(){o.r(n);var e=o(1),t=o(2);$=jQuery.noConflict(),(0,e.default)(),(0,t.default)()}()}();
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
+/* 1 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var menuMultiNivel = function menuMultiNivel() {
+  // Selecciona todos los elementos LI del menú multinivel
+  var listItems = document.querySelectorAll('.main-menu__li');
+  listItems.forEach(function (li) {
+    var anchor = li.querySelector('.main-menu__anchor');
+    var subMenu = li.querySelector('.main-menu__sub-menu-first-level');
+    // Solo añade la funcionalidad de tabulación a los anchors que tienen un submenú
+    if (subMenu && anchor) {
+      anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        var isActive = subMenu.classList.contains('active');
+        document.querySelectorAll('.main-menu__sub-menu-first-level').forEach(function (menu) {
+          menu.classList.remove('active');
+        });
+        document.body.classList.remove('body-overflow');
+        if (!isActive) {
+          subMenu.classList.add('active');
+          document.body.classList.add('body-overflow');
+        }
+      });
+      // Añade la clase arrow-sub-menu al anchor si hay un submenú
+      anchor.classList.add('arrow-sub-menu');
+    }
+  });
+  // Funcionalidad del botón de hamburguesa
+  var hamburger = document.querySelector('.top-social-menu__hamburger');
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      var topWidget = document.querySelector('.top-widget');
+      var mainHeader = document.querySelector('.main-header');
+      var mainHeaderContainer = document.querySelector('.main-header__container');
+      var mainMenu = document.querySelector('.main-menu');
+      // Cambia la visibilidad de las imágenes
+      var hamburgerOpenImage = document.querySelector('.top-social-menu__hamburger-open');
+      var hamburgerCloseImage = document.querySelector('.top-social-menu__hamburger-close');
+      // Aquí se elimina la clase 'mb-body-overflow' y 'body-overflow' del body
+      document.body.classList.remove('body-overflow');
+      if (hamburgerOpenImage && hamburgerCloseImage) {
+        if (hamburgerOpenImage.style.display !== 'none') {
+          hamburgerOpenImage.style.display = 'none';
+          hamburgerCloseImage.style.display = 'block';
+        } else {
+          hamburgerOpenImage.style.display = 'block';
+          hamburgerCloseImage.style.display = 'none';
+        }
+      }
+      if (topWidget && mainHeader && mainHeaderContainer && mainMenu) {
+        topWidget.classList.toggle('top-widget-hidden');
+        mainHeader.classList.toggle('main-header-mb-height-adjusted');
+        mainHeaderContainer.classList.toggle('main-header-mb-height-adjusted');
+        mainMenu.classList.toggle('main-menu-mb-height');
+      } else {
+        console.error('Uno o más elementos necesarios no se encontraron.');
+      }
+      // Aquí comienza la lógica existente para el botón de hamburguesa
+      var menuMultiNivelElement = mainMenu; // Si es el mismo elemento, reutiliza la variable
+      var blurryOverlapElement = document.querySelector('.blurry-overlap');
+      if (menuMultiNivelElement) {
+        menuMultiNivelElement.classList.toggle('active');
+        blurryOverlapElement.classList.toggle('active');
+        document.body.classList.toggle('mb-body-overflow');
+      } else {
+        console.error('El menú multinivel no se encontró.');
+      }
+    });
+  } else {
+    console.error('El botón de hamburguesa no se encontró.');
+  }
+  // Agrega evento click a elementos para volver atrás en el menú multinivel
+  document.querySelectorAll('.main-menu__mb-back').forEach(function (backButton) {
+    backButton.addEventListener('click', function () {
+      var subMenu = backButton.closest('.main-menu__sub-menu-first-level');
+      if (subMenu) {
+        subMenu.classList.remove('active');
+      } else {
+        console.error('El elemento de retorno no se encuentra dentro de un submenú.');
+      }
+    });
+  });
+  var pushMenuListItems = document.querySelectorAll('.push-menu__li');
+  pushMenuListItems.forEach(function (li) {
+    var anchor = li.querySelector('.push-menu__anchor');
+    var subMenuContainer = li.querySelector('.push-menu__sub-menu-container');
+    if (subMenuContainer && anchor) {
+      anchor.classList.add('arrow-sub-menu');
+      anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        // Aquí puedes añadir cualquier lógica adicional para manejar la apertura/cierre del submenú
+        // ...
+      });
+    }
+  });
+  // Agrega funcionalidad de clic a .push-menu__anchor
+  var pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
+  pushMenuAnchors.forEach(function (anchor) {
+    anchor.addEventListener('click', function (event) {
+      if (anchor.textContent.trim().toLowerCase().includes('see all')) {
+        // No se ejecuta preventDefault para permitir el comportamiento normal del enlace
+        return;
+      }
+      event.preventDefault();
+      // Verifica si el ancho del viewport es mayor o igual a 1280px
+      if (window.innerWidth >= 1280) {
+        // Previene la acción por defecto del enlace
+        event.preventDefault();
+        return; // Detiene la ejecución adicional de la función
+      }
+      // El resto de la lógica para los elementos .push-menu__anchor
+      var subMenuContainer = anchor.nextElementSibling;
+      if (subMenuContainer && subMenuContainer.classList.contains('push-menu__sub-menu-container')) {
+        subMenuContainer.classList.toggle('active');
+        subMenuContainer.scrollIntoView();
+        var pushMenu = anchor.closest('.push-menu');
+        if (pushMenu) {
+          pushMenu.style.top = pushMenu.style.top === '-40px' ? '0px' : '-40px';
+        }
+      }
+    });
+  });
+  // Agrega evento click a elementos 'main-menu__mb-back-push'
+  document.querySelectorAll('.main-menu__mb-back-push').forEach(function (backButton) {
+    backButton.addEventListener('click', function () {
+      var subMenuContainer = backButton.closest('.push-menu__sub-menu-container');
+      if (subMenuContainer) {
+        subMenuContainer.classList.remove('active');
+        // Encuentra el elemento ul .push-menu más cercano y cambia su estilo
+        var pushMenu = backButton.closest('.push-menu');
+        if (pushMenu) {
+          pushMenu.style.top = '0px'; // Restablece el estilo top a 0
+        }
+      }
+    });
+  });
+  // Funcionalidad para el elemento .blurry-overlap
+  var blurryOverlap = document.querySelector('.blurry-overlap');
+  if (blurryOverlap) {
+    blurryOverlap.addEventListener('click', function () {
+      // 1. Cambiar la visibilidad de los elementos del menú hamburguesa
+      var hamburgerOpenImage = document.querySelector('.top-social-menu__hamburger-open');
+      var hamburgerCloseImage = document.querySelector('.top-social-menu__hamburger-close');
+      if (hamburgerOpenImage && hamburgerCloseImage) {
+        hamburgerOpenImage.style.display = 'block';
+        hamburgerCloseImage.style.display = 'none';
+      }
+      // 2. Quitar las clases .mb-body-overflow y .body-overflow del body
+      document.body.classList.remove('mb-body-overflow');
+      document.body.classList.remove('body-overflow');
+      // 3. Remover la clase active del elemento main menu
+      var mainMenu = document.querySelector('.main-menu');
+      if (mainMenu) {
+        mainMenu.classList.remove('active');
+        mainMenu.classList.toggle('main-menu-mb-height');
+      }
+      // 4. Alternar la clase 'active' en el propio .blurry-overlap
+      blurryOverlap.classList.toggle('active');
+      // 1. Alternar la clase en main-header
+      var mainHeader = document.querySelector('.main-header');
+      if (mainHeader) {
+        mainHeader.classList.toggle('main-header-mb-height-adjusted');
+      }
+      // 2. Alternar la clase en main-header__container
+      var mainHeaderContainer = document.querySelector('.main-header__container');
+      if (mainHeaderContainer) {
+        mainHeaderContainer.classList.toggle('main-header-mb-height-adjusted');
+      }
+      // 3. Alternar la clase en top-widget
+      var topWidget = document.querySelector('.top-widget');
+      if (topWidget) {
+        topWidget.classList.toggle('top-widget-hidden');
+      }
+    });
+  } else {
+    console.error('El elemento .blurry-overlap no se encontró.');
+  }
+
+  // Selecciona el botón que abre la búsqueda
+  var openSearchButton = document.querySelector('.open-top-search');
+
+  // Selecciona el botón que cierra la búsqueda
+  var closeSearchButton = document.querySelector('.close-top-search');
+
+  // Selecciona el contenedor de búsqueda
+  var searchContainer = document.querySelector('.top-nav__search');
+
+  // Verifica que el botón de abrir exista
+  if (openSearchButton && searchContainer) {
+    openSearchButton.addEventListener('click', function () {
+      // Alterna la clase 'active' en el contenedor de búsqueda
+      searchContainer.classList.toggle('active');
+    });
+  } else {
+    console.error('El botón para abrir la búsqueda o el contenedor de búsqueda no se encontraron.');
+  }
+
+  // Verifica que el botón de cerrar exista
+  if (closeSearchButton && searchContainer) {
+    closeSearchButton.addEventListener('click', function () {
+      // Remueve la clase 'active' del contenedor de búsqueda
+      searchContainer.classList.remove('active');
+    });
+  } else {
+    console.error('El botón para cerrar la búsqueda o el contenedor de búsqueda no se encontraron.');
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (menuMultiNivel);
+
+/***/ }),
+/* 2 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var midSizeSlider = function midSizeSlider() {
+  document.addEventListener("DOMContentLoaded", function () {
+    var midSizeSlider = document.querySelector('.mid-size-slider');
+    if (midSizeSlider) {
+      var _midSizeSlider = new Swiper('.mid-size-slider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        allowThresholdMove: true,
+        slidesPerView: 'auto',
+        spaceBetween: 7,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          320: {},
+          481: {},
+          640: {},
+          768: {},
+          960: {},
+          1024: {},
+          1200: {},
+          1440: {},
+          1600: {},
+          1900: {}
+        }
+      });
+    }
+    var midSizeSliderSection = document.querySelector('.mid-size-slider-section');
+    if (midSizeSliderSection) {
+      midSizeSliderSection.style.display = 'block';
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (midSizeSlider);
+
+/***/ })
+/******/ 	]);
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+;
+
+
+(function () {
+  // To avoid conflicts with jQuery versions between WordPress and its plugins 
+  $ = jQuery.noConflict();
+  (0,_core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+})();
+}();
+/******/ })()
+;
 //# sourceMappingURL=theme-scripts.js.map
