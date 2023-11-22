@@ -117,6 +117,7 @@ body {
 		padding							: 15px 0;
 	}
 	&__logo{
+		width							: 100%;
 		max-width: 250px;
 		@include from(m){
 			max-width					: 300px;

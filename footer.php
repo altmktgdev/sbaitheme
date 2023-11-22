@@ -15,9 +15,9 @@
 		<footer class="main-footer">
 			<div class="main-footer__item">
 			<?php
-				$f_logo = get_theme_file_uri()."/images/logo-white.svg";
+				$f_logo = get_theme_file_uri()."/images/logo_sbai_white.svg";
 				if(esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')))){
-				$f_logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo')));
+				$f_logo = esc_url(wp_get_attachment_url(get_theme_mod('custom_logo'))); 
 			}
 			?>
 				<a href="<?php echo home_url(); ?>">
