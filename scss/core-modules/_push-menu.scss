@@ -19,12 +19,13 @@
 		height								: 100%;
 		width								: 100%;
 		max-width							: 480px;
+		padding-bottom						: 70px;
 		&::-webkit-scrollbar {
 			display							: none;
 		}
 		-ms-overflow-style					: none;
 		scrollbar-width						: none;
-		&__li{}
+		
 		&__anchor{
 			text-decoration					: none;
 			font							: normal normal bold 16px/20px Metropolis;
