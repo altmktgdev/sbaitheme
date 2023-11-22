@@ -164,7 +164,7 @@ figure .aligncenter, .size-full > img{
 	-webkit-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
 	-moz-box-shadow: 9px 14px 11px -10px rgba(102,102,102,0.11);
 	padding: 15px;
-	@include from (lg){
+	@include from (l){
 		padding: 30px;
 	}
 }
