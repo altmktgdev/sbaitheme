@@ -151,19 +151,19 @@
 		flex-wrap							: wrap;
 		justify-content						: flex-start;
 		// flex-direction						: column;
-		&__li:first-child{
-			flex							:none;
-			width							: 100%; 
-			margin-bottom					: 30px;	
+		// &__li:first-child{
+		// 	flex							:none;
+		// 	width							: 100%; 
+		// 	margin-bottom					: 30px;	
 			
-		}
-		&__li:first-child > a{
-			text-align						: center;
-			display							: block;
-			padding							: 0 !important;
-			cursor							: pointer;
+		// }
+		// &__li:first-child > a{
+		// 	text-align						: center;
+		// 	display							: block;
+		// 	padding							: 0 !important;
+		// 	cursor							: pointer;
 			
-		}
+		// }
 		&__li{
 			flex							:none;
 			width							: 16.6666666667%; 
