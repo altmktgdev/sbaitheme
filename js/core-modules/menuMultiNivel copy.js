@@ -84,15 +84,23 @@ const menuMultiNivel = () => {
         const subMenuContainer = li.querySelector('.push-menu__sub-menu-container');
         if (subMenuContainer && anchor) {
             anchor.classList.add('arrow-sub-menu');
-			anchor.addEventListener('click', (event) => {
-				event.preventDefault();
-			});
         }
     });
 	// Agrega funcionalidad de clic a .push-menu__anchor
 	const pushMenuAnchors = document.querySelectorAll('.push-menu__anchor');
 	pushMenuAnchors.forEach(anchor => {
 		anchor.addEventListener('click', (event) => {
+			if (anchor.textContent.trim().toLowerCase().includes('All')) {
+                // No se ejecuta preventDefault para permitir el comportamiento normal del enlace
+                return;
+            }
+			event.preventDefault();
+			// Verifica si el ancho del viewport es mayor o igual a 1280px
+			if (window.innerWidth >= 1280) {
+				// Previene la acción por defecto del enlace
+				event.preventDefault();
+				return; // Detiene la ejecución adicional de la función
+			}
 			// El resto de la lógica para los elementos .push-menu__anchor
 			const subMenuContainer = anchor.nextElementSibling;
 			if (subMenuContainer && subMenuContainer.classList.contains('push-menu__sub-menu-container')) {
