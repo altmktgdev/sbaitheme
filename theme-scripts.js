@@ -219,18 +219,6 @@ var midSizeSlider = function midSizeSlider() {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          320: {},
-          481: {},
-          640: {},
-          768: {},
-          960: {},
-          1024: {},
-          1200: {},
-          1440: {},
-          1600: {},
-          1900: {}
         }
       });
     }
