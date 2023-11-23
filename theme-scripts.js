@@ -234,9 +234,11 @@ var midSizeSlider = function midSizeSlider() {
         }
       });
     }
-    var midSizeSliderSection = document.querySelector('.mid-size-slider-section');
-    if (midSizeSliderSection) {
-      midSizeSliderSection.style.display = 'block';
+    var midSizeSliders = document.querySelectorAll('.mid-size-slider-section');
+    if (midSizeSliders) {
+      midSizeSliders.forEach(function (slider) {
+        slider.style.display = 'block';
+      });
     }
   });
 };

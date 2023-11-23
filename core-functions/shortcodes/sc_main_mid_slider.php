@@ -50,7 +50,7 @@ $atts = shortcode_atts(array(
 	</div>';
 
 		
-		$html .= '<div class="mid-size-slider-sectionn"> 
+		$html .= '<div class="mid-size-slider-section"> 
 				<div class="swiper mid-size-slider">
 					<div class="swiper-wrapper">';
 					
