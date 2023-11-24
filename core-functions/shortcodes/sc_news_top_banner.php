@@ -1,6 +1,6 @@
 <?php
 
-function newsTopBanner($atts) {
+function scNewsTopBanner($atts) {
 	// Atributos predeterminados
 	$atts = shortcode_atts(array(
 		'tag'       => '',
@@ -54,4 +54,4 @@ function newsTopBanner($atts) {
 		</section>';
 	return $html;
 }
-add_shortcode('news_top_banner', 'newsTopBanner');
+add_shortcode('sc_news_top_banner', 'scNewsTopBanner');
