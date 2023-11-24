@@ -86,13 +86,14 @@
 		font							: normal normal normal 12px/17px Metropolis;
 		letter-spacing					: 0.3px;
 		color							: #959FA3;
-		text-align: center;
+		text-align						: center;
+		text-transform					: capitalize;
 	}
 	&__item-anchors{
 		display							: flex;
 		justify-content					: space-between;
 		align-items						: center;		
-	}
+	} 
 	&__item-anchor{
 		font							: normal normal bold 16px/20px Metropolis;
 		letter-spacing					: 0.34px;		
@@ -102,6 +103,7 @@
 		display							: flex;
 		align-items						: center;
 		justify-content					: center;
+		text-transform					: capitalize !important;
 		@include from(m){
 			width						: 132px;
 			height						: 43px;
@@ -111,13 +113,14 @@
 		color							: #FFFFFF;
 		border							: 1px solid white;
 		border-radius					: 8px;
-
+		text-transform					: capitalize !important;
 	}
 	&__item-anchor:last-child{
 		color							: #959FA3;
 		background-color				: white;
 		border							: 1px solid #0000001A;
 		border-radius					: 8px;
+		text-transform					: capitalize !important;
 	}
 }
 /*here finish small-size slider module styles*/
