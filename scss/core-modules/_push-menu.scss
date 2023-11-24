@@ -56,6 +56,9 @@
 					z-index					: 1;
 				}
 			}
+			@include from(lg){
+				pointer-events: none;
+			}
 		}
 		&__anchor-mb-ico{
 			position: absolute;
