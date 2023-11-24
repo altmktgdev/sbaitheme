@@ -1,0 +1,123 @@
+/*here start small-size slider module styles*/
+.top-sportbooks-container{
+	background-color					: white;
+	margin-bottom						: 25px;
+	display								: none;
+	padding								: 15px;
+	box-shadow							: 0px 3px 6px #00000029;		
+	@include from(lg){
+		padding							: 30px;
+	}
+}
+
+.top-sportbooks .swiper-wrapper{
+	align-items: baseline;
+}
+
+.top-sportbooks{	
+	// overflow							: visible;
+	padding								: 15px 0 0 0;
+	z-index								: 0;
+	&__item{
+		position						: relative;
+		width							: 300px;
+		height							: 280px;
+		border-radius					: 28px;
+		padding							: 90px 20px 15px 20px;
+		display							: flex;
+		flex-direction					: column;
+		justify-content					: space-between;
+		background-color				: #02263C;	
+		@include from(m){
+			width						: 338px;
+			height						: 328px;
+			padding							: 104px 20px 15px 20px;
+		}
+		
+	}
+	&__item-ribon{
+		background-repeat				: no-repeat;
+		width							: 107px;
+		height							: 104px;
+		position						: relative;
+		// border							: 1px solid white;
+		display							: flex;
+		align-items						: center;
+		justify-content					: center;
+		font							: normal normal bold 30px/41px Metropolis;
+		letter-spacing					: 0.3px;
+		color							: #02263C;
+		position						: absolute;
+		top								: -12px;
+	}
+	&__item-brand{
+		// border							: 1px solid white;
+		display							: flex;
+		align-items						: center;
+		justify-content					: center;
+	}
+	&__item-brand-image{
+		max-width: 50%;
+	}
+	&__item-scores{
+		// border: 1px solid white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	&__item-score-title{
+		font							: normal normal 900 16px/19px Metropolis;
+		letter-spacing					: 0.57px;
+		color							: #F6A841;
+		text-transform					: uppercase;
+		text-align						: center;
+		
+	}
+	&__item-score-bonus{
+		font							: normal normal bold 20px/17px Metropolis;
+		letter-spacing					: 0.5px;
+		color							: #FFFFFF;
+		text-align						: center;
+		padding							: 10px 0;
+		text-decoration					: none;
+		
+	}
+	&__item-score-label{
+		font							: normal normal normal 12px/17px Metropolis;
+		letter-spacing					: 0.3px;
+		color							: #959FA3;
+		text-align: center;
+	}
+	&__item-anchors{
+		display							: flex;
+		justify-content					: space-between;
+		align-items						: center;		
+	}
+	&__item-anchor{
+		font							: normal normal bold 16px/20px Metropolis;
+		letter-spacing					: 0.34px;		
+		text-decoration					: none;
+		width							: 120px;
+		height							: 43px;
+		display							: flex;
+		align-items						: center;
+		justify-content					: center;
+		@include from(m){
+			width						: 132px;
+			height						: 43px;
+		}
+	}
+	&__item-anchor:first-child{
+		color							: #FFFFFF;
+		border							: 1px solid white;
+		border-radius					: 8px;
+
+	}
+	&__item-anchor:last-child{
+		color							: #959FA3;
+		background-color				: white;
+		border							: 1px solid #0000001A;
+		border-radius					: 8px;
+	}
+}
+/*here finish small-size slider module styles*/

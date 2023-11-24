@@ -282,6 +282,78 @@ var midSizeSlider = function midSizeSlider() {
 };
 /* harmony default export */ __webpack_exports__["default"] = (midSizeSlider);
 
+/***/ }),
+/* 4 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var topSportbooks = function topSportbooks() {
+  document.addEventListener("DOMContentLoaded", function () {
+    var topSportbooks = document.querySelector('.top-sportbooks');
+    if (topSportbooks) {
+      var _Swiper;
+      var _topSportbooks = new Swiper('.top-sportbooks', (_Swiper = {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        allowThresholdMove: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0
+      }, _defineProperty(_Swiper, "spaceBetween", 15), _defineProperty(_Swiper, "on", {
+        init: function init() {
+          // Select all slider containers and iterate over them
+          var sliderContainers = document.querySelectorAll('.top-sportbooks-container');
+          sliderContainers.forEach(function (sliderContainer) {
+            // Add 'display: block !important' directly to each container
+            sliderContainer.style.cssText = "display: block !important;";
+          });
+        }
+      }), _Swiper));
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (topSportbooks);
+
+/***/ }),
+/* 5 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var sportBettingSolutiones = function sportBettingSolutiones() {
+  document.addEventListener("DOMContentLoaded", function () {
+    var sportBettingSolutiones = document.querySelector('.sport-betting-solutions');
+    if (sportBettingSolutiones) {
+      var _Swiper;
+      var _sportBettingSolutiones = new Swiper('.sport-betting-solutions', (_Swiper = {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        allowThresholdMove: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0
+      }, _defineProperty(_Swiper, "spaceBetween", 15), _defineProperty(_Swiper, "on", {
+        init: function init() {
+          // Select all slider containers and iterate over them
+          var sliderContainers = document.querySelectorAll('.sport-betting-solutions-container');
+          sliderContainers.forEach(function (sliderContainer) {
+            // Add 'display: block !important' directly to each container
+            sliderContainer.style.cssText = "display: block !important;";
+          });
+        }
+      }), _Swiper));
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (sportBettingSolutiones);
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -329,7 +401,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _internal_modules_mainSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _internal_modules_topSportbooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _internal_modules_sportBettingSolutiones__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 ;
+
+
 
 
 
@@ -339,6 +415,8 @@ __webpack_require__.r(__webpack_exports__);
   (0,_core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_internal_modules_mainSlider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_internal_modules_topSportbooks__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_internal_modules_sportBettingSolutiones__WEBPACK_IMPORTED_MODULE_4__["default"])();
 })();
 }();
 /******/ })()
