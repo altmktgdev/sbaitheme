@@ -1,0 +1,66 @@
+/*here start small-size slider module styles*/
+.main-slider-container{
+	margin-bottom						: 25px;
+	display								: none;
+}
+.main-slider .swiper-wrapper{
+	align-items: baseline;
+}
+.main-slider{	
+	display								: none;
+	@include from (lg){
+		display: block;
+	}
+	z-index								: 0;
+	&__item{
+		position						: relative;
+		width							: 1200px;
+		height							: 442px;
+		border-top-left-radius			: 8px;
+		border-top-right-radius			: 8px;
+		overflow						: hidden;
+		text-decoration					: none;		
+		display							: flex;
+		flex-direction					: column;
+		justify-content					: flex-end;
+	}
+	&__item.swiper-slide-prev{
+		pointer-events					: none;
+	}
+	&__item.swiper-slide-next{
+		pointer-events					: none;
+	}
+	&__image-container{
+		width							: 1200px; 
+		height							: 442px;
+		border-radius					: 8px;		
+		background-repeat				: no-repeat;
+		background-position				: center center;
+		background-size					: cover;
+		margin-bottom					: 10px;
+	}	
+	&__prev, &__next{
+		--swiper-navigation-size		: 20px;
+        background-color				: white;
+        height							: 50px;
+        width							: 50px;
+        margin-top						: -35px;
+		color							: black;
+		font-weight						: bold;
+		box-shadow						: 0px 3px 6px #00000029;		
+	}
+	&__prev{
+		border-radius					: 50%;
+        left							: 30px;
+	}
+	&__next{
+		border-radius					: 50%;
+        right							: 30px;
+	}
+	.swiper-button-disabled{ 
+		opacity							: .3;
+		pointer-events					: initial;
+	}	
+	
+}
+/*here finish small-size slider module styles*/

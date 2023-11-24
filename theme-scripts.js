@@ -6,6 +6,56 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+var mainSlider = function mainSlider() {
+  document.addEventListener("DOMContentLoaded", function () {
+    var mainSliderElement = document.querySelector('.main-slider');
+    if (mainSliderElement) {
+      // Calcular el índice del último slide
+      var lastIndex = mainSliderElement.querySelectorAll('.swiper-slide').length - 1;
+      var mainSliderInstance = new Swiper('.main-slider', {
+        // Optional parameters                
+        speed: 800,
+        autoHeight: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        initialSlide: lastIndex,
+        // Establecer el último slide como el inicial
+        pagination: {
+          el: ".swiper-pagination",
+          // type: "progressbar"
+          clickable: true
+          // dynamicBullets: true
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        // Add init event
+        on: {
+          init: function init() {
+            // Select all slider containers and iterate over them
+            var sliderContainers = document.querySelectorAll('.main-slider-container');
+            sliderContainers.forEach(function (sliderContainer) {
+              // Add 'display: block !important' directly to each container
+              sliderContainer.style.cssText = "display: block !important;";
+            });
+          }
+        }
+      });
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (mainSlider);
+
+/***/ }),
+/* 2 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
 var menuMultiNivel = function menuMultiNivel() {
   // Selecciona todos los elementos LI del menú multinivel
   var listItems = document.querySelectorAll('.main-menu__li');
@@ -200,7 +250,7 @@ var menuMultiNivel = function menuMultiNivel() {
 /* harmony default export */ __webpack_exports__["default"] = (menuMultiNivel);
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -276,16 +326,19 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _internal_modules_mainSlider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 ;
+
 
 
 (function () {
   // To avoid conflicts with jQuery versions between WordPress and its plugins 
   $ = jQuery.noConflict();
-  (0,_core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_core_modules_menuMultiNivel__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_internal_modules_mainSlider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_internal_modules_midSizeSlider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 })();
 }();
 /******/ })()
