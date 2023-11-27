@@ -8,7 +8,7 @@
 				echo "
 					<li class='main-footer-menu-social__li'>
 						<a class='main-footer-menu-social__anchor' href='{$menu_item->url}'>
-							<img src='{$image_url}' alt='{$alt_text}'>
+							<img class='main-footer-menu-social__anchor-image' src='{$image_url}' alt='{$alt_text}'>
 						</a>
 					</li>";
 			}
