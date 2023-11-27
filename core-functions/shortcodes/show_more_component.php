@@ -68,20 +68,21 @@ function showMoreComponent($atts = []) {
 		return $html;
 }
 add_shortcode('show_more_component', 'showMoreComponent');
+
 function load_more_posts() {
     $page_number = isset($_POST['page_number']) ? intval($_POST['page_number']) : 1;
-    $category = isset($_POST['category']) ? $_POST['category'] : 'nfl';
+    $category = isset($_POST['category']) ? $_POST['category'] : '';
 
     $args = array(
-        'category_name'  => $category, // Aquí necesitas determinar la categoría correcta
+        'category_name'  => $category,
         'posts_per_page' => 5,
-        'paged'          => $page_number,
+        'paged'          => $page_number, // Asegúrate de que esto esté configurado correctamente
         'orderby'        => 'date',
         'order'          => 'DESC'
     );
     $posts_query = new WP_Query($args);
 
-    echo generate_news_grid($posts_query); // Agrega esto
+    echo generate_news_grid($posts_query);
     wp_die();
 }
 
@@ -89,7 +90,23 @@ add_action('wp_ajax_load_more_posts', 'load_more_posts'); // Si el usuario está
 add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts'); // Si el usuario no está autenticado
 
 function my_enqueue_scripts() {
-    wp_enqueue_script('my-ajax-script', get_stylesheet_directory_uri() . '/js/my-ajax-script.js', array('jquery'), '4.0.7', true);
-    wp_localize_script('my-ajax-script', 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+    global $wp_query;
+    $current_category = ''; // Inicializar como vacío
+
+    // Lógica para determinar la categoría actual
+    $current_url = $_SERVER['REQUEST_URI'];
+    $url_parts = explode('/', trim($current_url, '/'));
+    foreach ($url_parts as $index => $part) {
+        if ($part == 'news' && isset($url_parts[$index + 1])) {
+            $current_category = $url_parts[$index + 1];
+            break;
+        }
+    }
+
+    wp_enqueue_script('my-ajax-script', get_stylesheet_directory_uri() . '/js/my-ajax-script.js', array('jquery'), '1.0.1', true);
+    wp_localize_script('my-ajax-script', 'my_ajax_object', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'category' => $current_category // Agrega la categoría actual
+    ));
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
