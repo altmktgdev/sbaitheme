@@ -4,6 +4,7 @@ import menuMultiNivel from './core-modules/menuMultiNivel';
 import midSizeSlider from './internal-modules/midSizeSlider';
 import topSportbooks from './internal-modules/topSportbooks';
 import sportBettingSolutiones from './internal-modules/sportBettingSolutiones';
+import accordion from './internal-modules/accordion';
 
 (()=>{
 	// To avoid conflicts with jQuery versions between WordPress and its plugins 
@@ -13,4 +14,5 @@ import sportBettingSolutiones from './internal-modules/sportBettingSolutiones';
 	midSizeSlider(); 
 	topSportbooks();
 	sportBettingSolutiones();
+	accordion();
 })();

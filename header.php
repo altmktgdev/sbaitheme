@@ -27,14 +27,14 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<!-- Miscellaneous -->
-	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="telephone=no"> 
 	<meta name="MobileOptimized" content="width">
 	<meta name="HandheldFriendly" content="true">
 	<meta name="description" content="Sport Betting AI">
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/swiper-bundle.min.css"/>
 	<title><?php wp_title( ' | ', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
 	<?php wp_head(); ?>
 </head>

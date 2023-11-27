@@ -1,0 +1,64 @@
+/*here start accordion component styles*/
+.accordion-module{
+	margin-bottom: 60px;
+}
+.accordion-container{
+	margin-top					: 30px;
+	&__wrapp{
+		margin-bottom			: 20px;
+		border					: 1px solid #dddddd;
+	}
+	&__btn-acc {
+		position				: relative;
+		background-color		: white;
+		border					: none;
+		cursor					: pointer;
+		padding					: 0 60px 0 18px;
+		height					: 56px;
+		width					: 100%;
+		text-align				: left;
+		outline					: none;
+		border-bottom			: 1px solid #fff;
+		font					: normal normal 600 15px/27px Poppins;
+		letter-spacing			: -0.3px;
+		color					: #1F2024;
+		&.active {
+            background-color	: #f3f3f3;
+        }
+	}  
+	&__panel {
+		padding					: 0 15px;
+		background-color		: white;
+		font					: normal normal bold 20px/15px Metropolis;
+		letter-spacing			: 0px;
+		color					: #02263C;
+		display					: none;
+		&.active{
+			display				: block;
+		}
+		
+	}  
+	&__btn-acc:after {
+		position				: absolute;
+		top						: 15px;
+		right					: 20px;
+		content					: "";
+		width					: 25px;
+		height					: 25px;
+		background-image		: url('images/arrow-top.svg');
+		background-size			: cover;
+		background-repeat		: no-repeat;
+	}  
+	.active:after {
+		content					: "";
+		background-image		: url('images/arrow-down.svg');
+	}
+	&__text{
+		font					: normal normal medium 20px/26px Metropolis;
+		letter-spacing			: 0px;
+		color					: #616161;
+		margin					: 0;
+		padding					: 15px 0;
+	}
+}
+/*here finish accordion component styles*/
