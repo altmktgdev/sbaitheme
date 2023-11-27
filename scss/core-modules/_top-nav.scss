@@ -38,11 +38,14 @@
 	}
 	&__top-logo{
 		width							: 216px;
+		height							: 37px;
 		@include from(lg){
 			width						: 260px;
+			height						: 44px;
 		}
 		@include from(xl){
 			width						: 425px;
+			height						: 73px;
 		}
 	}
 	&__search{
