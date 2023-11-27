@@ -32,7 +32,7 @@ function generate_news_grid($posts_query) {
 function showMoreComponent($atts = []) {
     $current_url = $_SERVER['REQUEST_URI'];
     $url_parts = explode('/', trim($current_url, '/'));
-    $subcategory = ''; // Valor por defecto
+    $subcategory = 'nfl'; // Valor por defecto
     foreach ($url_parts as $index => $part) {
         if ($part == 'news' && isset($url_parts[$index + 1])) {
             $subcategory = $url_parts[$index + 1];
@@ -70,7 +70,7 @@ function showMoreComponent($atts = []) {
 add_shortcode('show_more_component', 'showMoreComponent');
 function load_more_posts() {
     $page_number = isset($_POST['page_number']) ? intval($_POST['page_number']) : 1;
-    $category = isset($_POST['category']) ? $_POST['category'] : '';
+    $category = isset($_POST['category']) ? $_POST['category'] : 'nfl';
 
     $args = array(
         'category_name'  => $category, // Aquí necesitas determinar la categoría correcta
