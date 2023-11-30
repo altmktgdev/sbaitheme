@@ -229,6 +229,10 @@
 		align-items						: center;
 		cursor							: pointer;
 	}
+	&__anchor > img{
+		width: 26px;
+		height: 26px;
+	}
 	&__hamburger{
 		cursor: pointer;
 	}
