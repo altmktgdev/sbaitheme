@@ -236,8 +236,13 @@
 	&__hamburger{
 		cursor: pointer;
 	}
+	
 	&__hamburger-close{
 		cursor: pointer;
 		display: none;
+	}
+	&__hamburger-open, &__hamburger-close{
+		width: 20px;
+		height: 20px;
 	}
 }
