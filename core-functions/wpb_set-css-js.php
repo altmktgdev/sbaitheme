@@ -6,14 +6,14 @@ if (!defined('ABSPATH')) {
 }
 
 // Función para encolar estilos - Sin cambios en esta parte
-if ( !function_exists( 'wpb_enqueue_styles' ) ) :
+if (!function_exists('wpb_enqueue_styles')) :
 
 function wpb_enqueue_styles() {
     // Desencolar estilos del tema padre
     wp_dequeue_style('twenty-twenty-one-style');
     wp_deregister_style('twenty-twenty-one-style');
 
-    // Encolar CSS personalizado del tema hijo
+    // Encolar CSS personalizado del tema hijo con el atributo 'defer'
     $child_theme_css_path = get_stylesheet_directory() . '/theme-styles.css';
     if (file_exists($child_theme_css_path)) {
         wp_enqueue_style(
@@ -22,13 +22,21 @@ function wpb_enqueue_styles() {
             [],
             filemtime($child_theme_css_path)
         );
+
+        // Agregar el atributo 'defer' al enlace de estilo
+        add_filter('style_loader_tag', function($tag, $handle) {
+            if ('child-theme-styles' !== $handle) {
+                return $tag;
+            }
+            return str_replace('>', ' defer>', $tag);
+        }, 10, 2);
     }
 }
 
 endif;
 
 // Función para encolar scripts con ajustes para carga óptima
-if ( !function_exists( 'wpb_enqueue_scripts' ) ) :
+if (!function_exists('wpb_enqueue_scripts')) :
 
 function wpb_enqueue_scripts() {
     // Encolar JS personalizado del tema hijo
@@ -57,5 +65,3 @@ endif;
 // Agregar las acciones con prioridad 20 para asegurarnos de que se ejecutan después de que el tema padre haya encolado sus estilos y scripts
 add_action('wp_enqueue_scripts', 'wpb_enqueue_styles', 20);
 add_action('wp_enqueue_scripts', 'wpb_enqueue_scripts', 20);
-
-?>
