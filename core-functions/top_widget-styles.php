@@ -2,7 +2,7 @@
 <?php
 
 function my_theme_enqueue_styles() {
-    wp_enqueue_style('my-custom-style', get_theme_file_uri('widgets.css'), array(), '1.0.1', false);
+    wp_enqueue_style('my-custom-style', get_theme_file_uri('widgets.css'), array(), '1.0.2', false);
 
     // Agrega un filtro para añadir el atributo 'defer' al tag de CSS
     add_filter('style_loader_tag', 'add_async_attribute_to_css', 10, 2);
