@@ -1,5 +1,6 @@
 /*here start de website template core*/
 @import "./core/normalize.scss"; 
+
 @import "./core/functions";
 @import "./core/mixins";
 @import "./core/media-queries";
@@ -14,6 +15,7 @@ $breakpoints 		:
 		xxl		: 1920px,
 		xxxl	: 4000px
 	);
+@import "./core/swiper"; 	
 @import "./layout/layout.scss";
 @import "./layout/fonts.scss";
 @import "./core-modules/core-modules"; 
