@@ -36,7 +36,6 @@
 			</div>
 		</footer>
 	</main>
-	<script defer="defer" src="<?php echo get_theme_file_uri(); ?>/swiper-bundle.min.js"></script>
 	<?php wp_footer(); ?>
 	</body>
 </html>
