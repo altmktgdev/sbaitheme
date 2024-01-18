@@ -5,6 +5,7 @@ import midSizeSlider from './internal-modules/midSizeSlider';
 import topSportbooks from './internal-modules/topSportbooks';
 import sportBettingSolutiones from './internal-modules/sportBettingSolutiones';
 import accordion from './internal-modules/accordion';
+import fullWidthSlider from './internal-modules/fullWidthSlider';
 
 (()=>{
 	// To avoid conflicts with jQuery versions between WordPress and its plugins 
@@ -15,4 +16,5 @@ import accordion from './internal-modules/accordion';
 	topSportbooks();
 	sportBettingSolutiones();
 	accordion();
+	fullWidthSlider();
 })();
